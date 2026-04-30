@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Fluids Laboratory | About PI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    .tab-content {
+      display: none;
+      animation: fadeEffect 0.5s;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeEffect {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .tab-section-block {
+      margin-bottom: 3rem;
+    }
+    .tab-section-block .section-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .year-tab-btn.tab-btn-styled {
+      border: 2px solid var(--secondary-blue);
+      border-radius: 30px;
+      padding: 0.5rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .year-tab-btn.tab-btn-styled:hover {
+      background-color: var(--secondary-blue);
+      color: var(--white);
+    }
+    .year-tab-btn.tab-btn-styled.active {
+      background-color: var(--secondary-blue);
+      color: var(--white);
+    }
+    .records-list-minimal {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+    .records-list-minimal li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="images/iitk_logo.jpg" alt="IITK Logo">
+        <div class="logo-text">
+          <span class="uni"> Dept. of Chemical Engineering IIT Kanpur </span>
+          <span class="lab">Complex Fluids Laboratory</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="about.html" class="active">About PI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-pi container" style="align-items: center; padding-top: 4rem; gap: 1rem;">
+      <div class="pi-image">
+        <img src="images/YMJ.png" alt="Prof. Yogesh M. Joshi">
+      </div>
+      <div class="pi-details">
+        <h1>Prof. Yogesh M. Joshi</h1>
+        <p class="credentials">FNA, FASc, FNASc, FNAE, FSoR (US)</p>
+        <div class="titles">
+          <p>J. C. Bose Fellow</p>
+          <p>Mr. and Mrs. Gian Singh Bindra Chair Professor</p>
+          <p>Senior Editor, Langmuir</p>
+          <p>Dept. of Chemical Engineering, Indian Institute of Technology Kanpur</p>
+        </div>
+        <div class="bio">
+          <p><strong>Education:</strong></p>
+          <p>B.E. University of Pune (1996)</p>
+          <p>Ph.D. IIT-Bombay & National Chemical Laboratory, Pune (2001)</p>
+          <p><strong>Post-Doctoral Fellowship:</strong> </p>
+          <p>Benjamin Levich Institute for Physico-Chemical Hydrodynamics, New York (2001-2004)</p>
+        </div>
+        <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1.5rem; align-items: center;">
+          <!-- LinkedIn Link (Add href below) -->
+          <a href="https://www.linkedin.com/in/yogesh-m-joshi-04ab21198/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" style="transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='none';">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width: 36px; height: 36px; border-radius: 4px;">
+          </a>
+          <!-- Wikipedia Link (Add href below) -->
+          <a href="https://en.wikipedia.org/wiki/Yogesh_M._Joshi" target="_blank" rel="noopener noreferrer" title="Wikipedia Page" style="transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='none';">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" style="width: 36px; height: 36px;">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 5rem;">
+      <div class="year-tabs-minimal" style="margin-top: 0; margin-bottom: 3rem;">
+        <button class="year-tab-btn tab-btn-styled active" onclick="switchTab('recognition', this)">Recognitions and Honours</button>
+        <button class="year-tab-btn tab-btn-styled" onclick="switchTab('professional', this)">Professional Roles</button>
+      </div>
+
+      <!-- Recognitions and Honours Tab -->
+      <div id="recognition" class="tab-content active">
+        <div class="tab-section-block">
+          <h2 class="section-title">Awards</h2>
+          <ul class="records-list-minimal">
+            <li><strong>J C Bose Fellowship</strong> (2023) of Science and Engineering Research Board, Department of Science and Technology, Government of India.</li>
+            <li><strong>Academy excellence award</strong> of the Defense Research and Development Organization 2019 (Declared in 2021).</li>
+            <li><strong>Distinguished Teacher Award</strong> of Indian Institute of Technology Kanpur (2018).</li>
+            <li><strong>Shanti Swarup Bhatnagar Award</strong> in Engineering Sciences (2015).</li>
+            <li><strong>RPG Life Sciences M. M. Sharma Gold Medal</strong> (IICHE) (2017).</li>
+            <li><strong>C. N. R. Rao Faculty award</strong> of IIT Kanpur (2015).</li>
+            <li><strong>Scopus Young Scientist Award</strong>, National Academy of Sciences (NASI), 2012 (2013).</li>
+            <li><strong>Outstanding Investigator Award</strong>, Department of Atomic Energy - Science Research Council (DAE - SRC) (2012).</li>
+            <li><strong>Distinguished Alumnus Award</strong> of Maharashtra Institute of Technology Pune (2010).</li>
+            <li><strong>Amar Dye Chem Award</strong>, Indian Institute of Chemical Engineers (IIChE) (2009).</li>
+            <li><strong>Young Engineer Award</strong>, Indian National Academy Engineering (INAE) (2008).</li>
+            <li><strong>Young Scientist Platinum Jubilee Award</strong>, National Academy of Sciences (NASI) (2008).</li>
+            <li><strong>Diamond Jubilee Young Achiever Award</strong>, Indian Institute of Chemical Engineers (IIChE) (2007).</li>
+            <li><strong>Medal for Young Scientist</strong>, Indian National Science Academy (INSA) (2006).</li>
+            <li><strong>Young Scientist Research Award</strong>, Department of Atomic Energy BRNS (2006).</li>
+          </ul>
+        </div>
+
+        <div class="tab-section-block">
+          <h2 class="section-title">Fellowship/Associateship of the Academies</h2>
+          <ul class="records-list-minimal">
+            <li><strong>Elected Fellow</strong> of the Society of Rheology, US (SoR) (2022).</li>
+            <li><strong>Elected Fellow</strong> of the Indian National Science Academy (INSA) (2023).</li>
+            <li><strong>Elected Fellow</strong> of the Indian Academy of Sciences (IAS) (2023).</li>
+            <li><strong>Elected Fellow</strong> of the National Academy of Sciences, India (NASI) (2017).</li>
+            <li><strong>Elected Fellow</strong> of the Indian National Academy Engineering (INAE) (2016).</li>
+            <li><strong>Fellow</strong> of the Royal Society of Chemistry (FRSC, Leaders in the field category).</li>
+            <li><strong>Young Associate</strong>, Indian National Academy Engineering (INAE) (2013-2019).</li>
+            <li><strong>Elected life member</strong> of National Academy of Sciences (NASI) (2010).</li>
+            <li><strong>Associate</strong> of Indian Academy of Sciences (2006-2009).</li>
+          </ul>
+        </div>
+
+        <div class="tab-section-block">
+          <h2 class="section-title">Award Lectures</h2>
+          <ul class="records-list-minimal">
+            <li><strong>RPG Life Sciences M. M. Sharma Speaker</strong> at CHEMCON 2017 Haldia, December 2017.</li>
+            <li><strong>Dr. R. A. Mashelkar Endowment Lecture</strong>, National Chemical Laboratory Pune, April 2015.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Professional Roles Tab -->
+      <div id="professional" class="tab-content">
+        <div class="tab-section-block">
+          <h2 class="section-title">Professional Services</h2>
+          <ul class="records-list-minimal">
+            <li><strong>Senior Editor</strong>, <em>Langmuir</em>, American Chemical Society (2020-...).</li>
+            <li><strong>Member of the Editorial Board</strong>, <em>Journal of Rheology</em>, The Society of Rheology, US (2022-...).</li>
+            <li><strong>Member of the Editorial Board</strong>, <em>Rheologica Acta</em>, The European Society of Rheology (2022-...).</li>
+            <li><strong>Member of the Editorial Advisory Board</strong>, <em>Thansport Phenomena</em>, De Gruyter Brill (2025-...).</li>
+            <li><strong>Member of the Editorial Advisory Board</strong>, <em>Open Transport</em>, De Gruyter Brill (2025-...).</li>
+            <li><strong>Member of the Editorial Advisory Board</strong>, <em>Physics of Fluids</em>, American Institute of Physics (2019-...).</li>
+            <li><strong>Member of the Editorial Advisory Board</strong>, <em>Langmuir</em>, American Chemical Society (2018-2019).</li>
+          </ul>
+        </div>
+
+        <div class="tab-section-block">
+          <h2 class="section-title">Chair Professor Positions at IIT Kanpur</h2>
+          <ul class="records-list-minimal">
+            <li><strong>Mr. and Mrs. Gian Singh Bindra Chair Professor</strong> (2024-...).</li>
+            <li><strong>Pandit Girish &amp; Sushma Rani Pathak Chair Professor</strong> (2021-2024).</li>
+            <li><strong>C. V. Seshadri Chair Professor Position</strong> (2015-2018).</li>
+            <li><strong>P. K. Kelkar Faculty Research Fellowship</strong> (2013-2016).</li>
+            <li><strong>Batch of 1979 Faculty Research Fellowship</strong> (2009-2012).</li>
+          </ul>
+        </div>
+
+        <div class="tab-section-block">
+          <h2 class="section-title">Visiting/Adjunct Professorship</h2>
+          <ul class="records-list-minimal">
+            <li><strong>Adjunct Professor</strong> in the department of Chemical Engineering, Department of Polymer &amp; Surface Engineering, Department of Fibres &amp; Textile Processing Technology, and Department of Physics at Institute of Chemical Technology, Mumbai (2020-2024).</li>
+            <li><strong>Shri V. V. Mariwala Visiting Professorship</strong> in Chemical Engineering of Institute of Chemical Technology, Mumbai (June 2015).</li>
+            <li><strong>Institute of Electronic Structure and Lasers (IESL)</strong> - FORTH, Crete, Greece (May 2015).</li>
+            <li><strong>University of Edinburgh</strong>, Edinburgh, UK (May - July 2010).</li>
+            <li><strong>University du Maine</strong>, Le Mans, France (May - June 2008).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching Section added outside the tabs so it isn't hidden -->
+    <section class="records container bg-light" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <h2 class="section-title" style="font-size: 1.75rem;">Teaching</h2>
+      <div style="display: flex; gap: 4rem; flex-wrap: wrap;">
+        <div>
+          <h3 style="color: var(--text-dark); margin-bottom: 1rem; margin-top: 1rem;">Undergraduate Courses</h3>
+          <ul class="records-list-minimal" style="margin-top: 0;">
+            <li>ESO201 Thermodynamics</li>
+            <li>ESO204 Fluid Mechanics and Rate Processes</li>
+            <li>ChE221 Chemical Engineering Thermodynamics</li>
+            <li>ChE300 Chemical Engineering Communication Skills</li>
+            <li>ChE391 Chemical Process Industries</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--text-dark); margin-bottom: 1rem; margin-top: 1rem;">Graduate Courses</h3>
+          <ul class="records-list-minimal" style="margin-top: 0;">
+            <li>Che 601 Fundamentals of Chemical Engineering</li>
+            <li>Che 611 Transport Phenomena</li>
+            <li>Che 613 The Structure &amp; Rheology of Complex Fluids</li>
+            <li>Che 621 Advanced Thermodynamics and Statistical Mechanics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h3>Contact Us</h3>
+        <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+          <div>
+            <p>Southern Lab-114</p>
+            <p>Dept. of Chemical Engineering</p>
+            <p>IIT Kanpur</p>
+          </div>
+          <div style="border-left: 1px solid rgba(255,255,255,0.3);"></div>
+          <div>
+            <p>Northern Labs-102B</p>
+            <p>Dept. of Chemical Engineering</p>
+            <p>IIT Kanpur</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h3>Get in Touch</h3>
+        <p>📞 Phone: 91-512-2597993</p>
+        <p>📠 Fax: 91-512-2590104</p>
+        <p>✉️ Email: <a href="mailto:joshi@iitk.ac.in">joshi@iitk.ac.in</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabId, btnElement) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(el => {
+        el.classList.remove('active');
+      });
+      // Remove active class from all buttons
+      document.querySelectorAll('.year-tab-btn').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      // Show selected tab content
+      document.getElementById(tabId).classList.add('active');
+      // Set button as active
+      btnElement.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>

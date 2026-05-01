@@ -78,12 +78,12 @@
 
   <main>
     <section class="about-pi container" style="align-items: center; padding-top: 4rem; gap: 1rem;">
-      <div class="pi-image">
-        <img src="images/YMJ.png" alt="Prof. Yogesh M. Joshi">
+      <div class="pi-image" >
+        <img src="images/YMJ.png" style="width: 85%" alt="Prof. Yogesh M. Joshi">
       </div>
-      <div class="pi-details">
+      <div class="pi-details" style="width: 100%;">
         <h1>Prof. Yogesh M. Joshi</h1>
-        <p class="credentials">FNA, FASc, FNASc, FNAE, FSoR (US)</p>
+        <p class="credentials">FNA, FASc, FNASc, FNAE, FSoR (US), FRSC</p>
         <div class="titles">
           <p>J. C. Bose Fellow</p>
           <p>Mr. and Mrs. Gian Singh Bindra Chair Professor</p>
@@ -102,9 +102,20 @@
           <a href="https://www.linkedin.com/in/yogesh-m-joshi-04ab21198/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" style="transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='none';">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width: 36px; height: 36px; border-radius: 4px;">
           </a>
-          <!-- Wikipedia Link (Add href below) -->
+          <!-- Wikipedia Link -->
           <a href="https://en.wikipedia.org/wiki/Yogesh_M._Joshi" target="_blank" rel="noopener noreferrer" title="Wikipedia Page" style="transition: var(--transition);" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='none';">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg" alt="Wikipedia" style="width: 36px; height: 36px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wikipedia%27s_W.svg/120px-Wikipedia%27s_W.svg.png" alt="Wikipedia" style="width: 36px; height: 36px; border: 2px solid #ccc; border-radius: 6px; padding: 2px;">
+          </a>
+          <!-- CV Link-->
+          <!-- For updating CV add new PDF to the folder and update the name in href below-->
+          <a href="YMJ_CV.pdf" target="_blank" rel="noopener noreferrer" title="Download CV" style="transition: var(--transition); display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 2px solid #ccc; border-radius: 6px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.borderColor='var(--secondary-blue)';" onmouseout="this.style.transform='none'; this.style.borderColor='#ccc';">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 22px; height: 22px; color: #555;">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
           </a>
         </div>
       </div>
@@ -119,6 +130,7 @@
       <!-- Recognitions and Honours Tab -->
       <div id="recognition" class="tab-content active">
         <div class="tab-section-block">
+          <!-- Award Section-->
           <h2 class="section-title">Awards</h2>
           <ul class="records-list-minimal">
             <li><strong>J C Bose Fellowship</strong> (2023) of Science and Engineering Research Board, Department of Science and Technology, Government of India.</li>
@@ -140,6 +152,7 @@
         </div>
 
         <div class="tab-section-block">
+          <!-- Fellowship/Associateship of the Academies Section-->
           <h2 class="section-title">Fellowship/Associateship of the Academies</h2>
           <ul class="records-list-minimal">
             <li><strong>Elected Fellow</strong> of the Society of Rheology, US (SoR) (2022).</li>
@@ -155,6 +168,7 @@
         </div>
 
         <div class="tab-section-block">
+          <!-- Award Lectures Section-->
           <h2 class="section-title">Award Lectures</h2>
           <ul class="records-list-minimal">
             <li><strong>RPG Life Sciences M. M. Sharma Speaker</strong> at CHEMCON 2017 Haldia, December 2017.</li>
@@ -166,6 +180,7 @@
       <!-- Professional Roles Tab -->
       <div id="professional" class="tab-content">
         <div class="tab-section-block">
+          <!-- Professional Services Section-->
           <h2 class="section-title">Professional Services</h2>
           <ul class="records-list-minimal">
             <li><strong>Senior Editor</strong>, <em>Langmuir</em>, American Chemical Society (2020-...).</li>
@@ -179,6 +194,7 @@
         </div>
 
         <div class="tab-section-block">
+          <!-- Chair Professor Positions at IIT Kanpur Section-->
           <h2 class="section-title">Chair Professor Positions at IIT Kanpur</h2>
           <ul class="records-list-minimal">
             <li><strong>Mr. and Mrs. Gian Singh Bindra Chair Professor</strong> (2024-...).</li>
@@ -190,6 +206,7 @@
         </div>
 
         <div class="tab-section-block">
+          <!-- Visiting/Adjunct Professorship Section-->
           <h2 class="section-title">Visiting/Adjunct Professorship</h2>
           <ul class="records-list-minimal">
             <li><strong>Adjunct Professor</strong> in the department of Chemical Engineering, Department of Polymer &amp; Surface Engineering, Department of Fibres &amp; Textile Processing Technology, and Department of Physics at Institute of Chemical Technology, Mumbai (2020-2024).</li>
@@ -202,7 +219,7 @@
       </div>
     </section>
 
-    <!-- Teaching Section added outside the tabs so it isn't hidden -->
+    <!-- Teaching Section -->
     <section class="records container bg-light" style="padding-top: 5rem; padding-bottom: 5rem;">
       <h2 class="section-title" style="font-size: 1.75rem;">Teaching</h2>
       <div style="display: flex; gap: 4rem; flex-wrap: wrap;">

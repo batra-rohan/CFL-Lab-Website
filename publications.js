@@ -54,11 +54,11 @@ function processPublications(data) {
         tabsToCreate.push(year);
     }
 
-    // Group remaining into "Older"
+    // Group remaining into "Older" — stored as array of { year, pubs } for headings
     if (sortedYears.length > 5) {
         globalPubsByTab["Older"] = [];
         for (let i = 5; i < sortedYears.length; i++) {
-            globalPubsByTab["Older"] = globalPubsByTab["Older"].concat(rawPubsByYear[sortedYears[i]]);
+            globalPubsByTab["Older"].push({ year: sortedYears[i], pubs: rawPubsByYear[sortedYears[i]] });
         }
         tabsToCreate.push("Older");
     }
@@ -98,9 +98,13 @@ function renderTab(tabName, tabsContainer, listContainer) {
         }
     }
 
-    // Render initially up to 10
-    const pubs = globalPubsByTab[tabName] || [];
-    renderList(pubs, listContainer, 10);
+    // For Older tab, render with year headings; otherwise render flat list (limit 10)
+    if (tabName === "Older") {
+        renderOlderTab(globalPubsByTab["Older"] || [], listContainer);
+    } else {
+        const pubs = globalPubsByTab[tabName] || [];
+        renderList(pubs, listContainer, 10);
+    }
 }
 
 function renderList(pubs, listContainer, limit) {
@@ -123,6 +127,47 @@ function renderList(pubs, listContainer, limit) {
         btn.onclick = () => {
             // Re-render the full list to show all items
             renderList(pubs, listContainer, pubs.length);
+        };
+
+        showMoreContainer.appendChild(btn);
+        listContainer.appendChild(showMoreContainer);
+    }
+}
+
+function renderOlderTab(yearGroups, listContainer) {
+    listContainer.innerHTML = "";
+
+    if (yearGroups.length === 0) return;
+
+    // Always show the most recent year (first in the array) upfront
+    const firstGroup = yearGroups[0];
+    const firstHeading = document.createElement("li");
+    firstHeading.className = "pub-year-heading";
+    firstHeading.textContent = firstGroup.year;
+    listContainer.appendChild(firstHeading);
+    firstGroup.pubs.forEach(pub => listContainer.appendChild(createPublicationLi(pub)));
+
+    // If there are more years, add a Show More button
+    if (yearGroups.length > 1) {
+        const remaining = yearGroups.slice(1);
+        const totalRemaining = remaining.reduce((sum, g) => sum + g.pubs.length, 0);
+
+        const showMoreContainer = document.createElement("li");
+        showMoreContainer.style.listStyle = "none";
+        showMoreContainer.className = "show-more-container";
+
+        const btn = document.createElement("button");
+        btn.className = "show-more-btn";
+        btn.textContent = `Show More (${totalRemaining} remaining)`;
+        btn.onclick = () => {
+            showMoreContainer.remove();
+            remaining.forEach(({ year, pubs }) => {
+                const heading = document.createElement("li");
+                heading.className = "pub-year-heading";
+                heading.textContent = year;
+                listContainer.appendChild(heading);
+                pubs.forEach(pub => listContainer.appendChild(createPublicationLi(pub)));
+            });
         };
 
         showMoreContainer.appendChild(btn);

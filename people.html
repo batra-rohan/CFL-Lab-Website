@@ -38,16 +38,17 @@
 
   <main>
     <section class="group-photo">
+      <!--Update Group photo here -->
       <img src="people/Group Photo2018.jpg" alt="Complex Fluids Laboratory Group Photo">
     </section>
 
     <section class="people-section container">
       <h2 class="section-title" style="display: block; text-align: center;">Current Members</h2>
       <div id="current-tabs" class="year-tabs-minimal">
-        <!-- Tabs injected by JS -->
+        <!-- People information is in people.js-->
       </div>
       <div id="current-content" class="people-grid">
-        <!-- Content injected by JS -->
+        <!-- People information is in people.js-->
       </div>
     </section>
 
@@ -55,14 +56,71 @@
       <div class="container" style="padding-top: 1rem;">
         <h2 class="section-title" style="display: block; text-align: center;">Alumni</h2>
         <div id="alumni-tabs" class="year-tabs-minimal">
-          <!-- Tabs injected by JS -->
+          <!-- People information is in people.js-->
         </div>
         <div id="alumni-content" class="people-grid">
-          <!-- Content injected by JS -->
+          <!-- People information is in people.js-->
         </div>
       </div>
     </section>
+    <section class="gallery-section">
+      <div class="gallery-header container">
+        <h2 class="section-title" style="display: block; text-align: center; padding-top: 3rem;">Group Gallery</h2>
+      </div>
+      <div class="gallery-carousel">
+        <button class="gallery-btn gallery-btn-prev" onclick="moveGallery(-1)" aria-label="Previous">&#8592;</button>
+        <div class="gallery-track-wrapper">
+          <div class="gallery-track" id="galleryTrack">
+            <img src="people/group gallery/GP1.jpg" alt="Group Photo 1">
+            <img src="people/group gallery/GP2.jpg" alt="Group Photo 2">
+            <img src="people/group gallery/GP3.JPG" alt="Group Photo 3">
+            <img src="people/group gallery/GP4.jpg" alt="Group Photo 4">
+            <img src="people/group gallery/LAb selfie.jpg" alt="Lab Selfie">
+            <img src="people/group gallery/Saswati farewell.jpg" alt="Saswati Farewell">
+            <img src="people/group gallery/anika treat.jpg" alt="Anika Treat">
+            <img src="people/group gallery/Asheesh's B'day.jpg" alt="Asheesh Birthday">
+            <img src="people/group gallery/new1.jpg" alt="Group Photo">
+            <img src="people/group gallery/new2.jpg" alt="Group Photo">
+            <img src="people/group gallery/new3.jpg" alt="Group Photo">
+            <img src="people/group gallery/new4.jpg" alt="Group Photo">
+            <img src="people/group gallery/new5.jpg" alt="Group Photo">
+            <img src="people/group gallery/new6.jpg" alt="Group Photo">
+            <img src="people/group gallery/new7.jpg" alt="Group Photo">
+            <!--Insert new group image here to show in gallery-->
+          </div>
+        </div>
+        <button class="gallery-btn gallery-btn-next" onclick="moveGallery(1)" aria-label="Next">&#8594;</button>
+      </div>
+      <div class="gallery-dots" id="galleryDots"></div>
+    </section>
   </main>
+
+  <script>
+    let currentSlide = 0;
+    const track = document.getElementById('galleryTrack');
+    const images = track.querySelectorAll('img');
+    const dotsContainer = document.getElementById('galleryDots');
+
+    // Build dots
+    images.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(dot);
+    });
+
+    function goToSlide(index) {
+      currentSlide = ((index % images.length) + images.length) % images.length;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      document.querySelectorAll('.gallery-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    function moveGallery(dir) {
+      goToSlide(currentSlide + dir);
+    }
+  </script>
 
   <footer class="footer">
     <div class="container footer-content">

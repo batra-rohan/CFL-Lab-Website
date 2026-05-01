@@ -57,10 +57,10 @@ const peopleData = {
       { name: "Tushar Deshpande", image: "people/alumni/PhD/TD.jpg", linkedin: "https://www.linkedin.com/in/dr-tushar-deshpande-a167b8163?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2019", focus: "center" },
       { name: "Bhavna Vyas", image: "people/alumni/PhD/Bhavna.jpg", linkedin: "https://www.linkedin.com/in/dr-bhavna-vyas-92052b4a?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2020", focus: "top", },
       { name: "Khushboo Suman", image: "people/alumni/PhD/Khushboo.jpg", linkedin: "https://www.linkedin.com/in/khushboo-suman-96430b62?utm_source=share_via&utm_content=profile&utm_medium=member_android", website: "https://che.iitm.ac.in/faculty.php?fname=Dr.+Khushboo+Suman", year: "2020", focus: "top" },
-      { name: "Sandeep Kumar", image: "people/alumni/PhD/sandeep kumar.JPG", linkedin: "[LinkedIn URL]", year: "2020", focus: "top" },
+      { name: "Sandeep Kumar", image: "people/alumni/PhD/sandeepkumar.JPG", linkedin: "[LinkedIn URL]", year: "2020", focus: "top" },
       { name: "Mayank Agarwal", image: "people/alumni/PhD/mayank agarwal.jpg", linkedin: "https://www.linkedin.com/in/mayank-agarwal-iitk?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2021", focus: "left", zoom: "1.5" },
       { name: "Lakshmi Kushwaha", image: "people/alumni/PhD/lakshmi.jpg", linkedin: "https://www.linkedin.com/in/lakshmi-kushwaha?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2023", focus: "center" },
-      { name: "Shweta Sharma", image: "people/alumni/PhD/shweta.JPG", linkedin: "[LinkedIn URL]", year: "2023", focus: "center" },
+      { name: "Shweta Sharma", image: "people/alumni/PhD/shweta.jpeg", linkedin: "[LinkedIn URL]", year: "2023", focus: "center" },
       { name: "Tulika Bhattacharyya", image: "people/alumni/PhD/tulika.jpg", linkedin: "https://www.linkedin.com/in/tulika-bhattacharyya-phd-012422b0?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2023", focus: "center" },
       { name: "Shivangi Mittal", image: "people/alumni/PhD/Shivangi Mittal.jpg", linkedin: "https://www.linkedin.com/in/shivangi-mittal-2627a3149?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2026", focus: "center" },
       { name: "Vivek Kumar", image: "people/alumni/PhD/Vivek.jpg", linkedin: "https://www.linkedin.com/in/vivek-kumar-singh-3b1716106?utm_source=share_via&utm_content=profile&utm_medium=member_android", year: "2026", focus: "center" }
